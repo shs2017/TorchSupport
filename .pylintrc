@@ -1,0 +1,5 @@
+[TYPECHECK]
+
+# Dynamically set members of libraries which are missed
+# by Pylint inference
+generated-members=numpy.*, torch.*
