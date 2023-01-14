@@ -1,15 +1,15 @@
 """
-Tests for the torch_test package
+Tests for the torch_support package
 """
 
 import torch
 from torch import nn
 from pytest import raises
 
-from torch_test.utils import shape_test
+from torch_support.test import shape_test
 
 
-class TestTorchTest:
+class TestTorchSupport:
     def test_single(self):
         @shape_test(32, 16)
         class Network(nn.Module):
