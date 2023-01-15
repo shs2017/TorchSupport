@@ -46,7 +46,7 @@ An example use case would be as follow:
 d = {
     'lr': SyncOption([1., 1e-1, 1e-2, 1e-3]),
     'n_layers': RangeOption(5, 25, 5),
-    'hyper_parameter2': ProductOption([1, 2]),
+    'hyper_parameter1': ProductOption([1, 2]),
     'hyper_parameter2': ProductOption([3, 4]),
     'logger': CopyOption(Logger()),
     'constant':  [1, 2]
@@ -66,42 +66,42 @@ This will iterate over each possible instantiation of the hyperparameters, which
 ```
 # Iteration 1
 {
-    'lr': 1.,
+    'lr': 1.0,
     'n_layers': 5,
     'hyper_parameter1': 1,
     'hyper_parameter2': 3,
     'logger': Logger(),
-    'constant':  [1, 2]
+    'constant': [1, 2]
 }
 
 # Iteration 2
 {
-    'lr': 1e-1,
+    'lr': 0.1,
     'n_layers': 10,
-    'hyper_parameter1': 2,
-    'hyper_parameter2': 3,
+    'hyper_parameter1': 1,
+    'hyper_parameter2': 4,
     'logger': Logger(),
-    'constant':  [1, 2]
+    'constant': [1, 2]
 }
 
 # Iteration 3
 {
-    'lr': 1e-2,
+    'lr': 0.01,
     'n_layers': 15,
-    'hyper_parameter1': 1,
-    'hyper_parameter2': 4,
+    'hyper_parameter1': 2,
+    'hyper_parameter2': 3,
     'logger': Logger(),
-    'constant':  [1, 2]
+    'constant': [1,2]
 }
 
 # Iteration 4
 {
-    'lr': 1e-3,
+    'lr': 0.001,
     'n_layers': 20,
     'hyper_parameter1': 2,
     'hyper_parameter2': 4,
     'logger': Logger(),
-    'constant':  [1, 2]
+    'constant': [1,2]
 }
 ```
 
