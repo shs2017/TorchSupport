@@ -9,7 +9,7 @@ from pytest import raises
 from torch_support.test import shape_test
 
 
-class TestTorchSupport:
+class TestShapeTest:
     def test_single(self):
         @shape_test(32, 16)
         class Network(nn.Module):
